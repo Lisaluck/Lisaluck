@@ -1,0 +1,49 @@
+i=10
+a=0
+
+b=0
+
+
+
+while( i>0):
+
+    import random
+
+    list = ['snake', 'water','gun']
+    ch = random.choice(list)
+    n = input("enter your choice")
+
+    if n==ch:
+
+        print ("there is tie ")
+        i=i-1
+    elif n=="snake" and  ch=="water" :
+        a=a+1
+        print("you won ", a)
+        i=i-1
+    elif n=="snake" and  ch=="gun" :
+
+        b=b+1
+        print("you lost ", b)
+        i=i-1
+    elif n==" water "  and ch=="gun":
+        a=a+1
+        print(" you won ",a)
+        i=i-1
+    elif n=="water" and ch=="snake":
+        b=b+1
+        print("you lost",b )
+        i=i-1
+    elif n=="gun" and  ch ==" snake":
+        a=a+1
+        print("you won",a)
+        i=i-1
+    else:
+        b=b+1
+        print("you lost", b)
+        i=i-1
+print("total of user:",a," \n total of pc: ",b)
+if (a>b):
+    print("congrats you won the match")
+else:
+    print("sorry try again ")
